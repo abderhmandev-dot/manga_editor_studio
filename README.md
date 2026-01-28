@@ -1,0 +1,2 @@
+# manga_editor_studio
+manga_editor_studio
