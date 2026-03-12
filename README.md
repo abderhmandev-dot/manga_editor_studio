@@ -26,9 +26,8 @@ Professional desktop tool for **cleaning, improving, and editing manga/webtoon p
 
 ---
 
-أكيد — دي نسخة أقصر وأوضح:
-
-````md
+ 
+ 
 # AI Setup (CPU / GPU)
 
 المشروع بيثبت مكتبات الـ AI الثقيلة خارج البرنامج وملف الـ EXE داخل:
@@ -41,15 +40,13 @@ Professional desktop tool for **cleaning, improving, and editing manga/webtoon p
 %LOCALAPPDATA%\MangaEditorV2\python\
   venv-cpu\
   venv-gpu\
-  venv-bubble\   # اختياري
-````
+ ````
 
 ## الاستخدام
 
 * `venv-cpu` → تشغيل على **CPU**
 * `venv-gpu` → تشغيل على **GPU**
-* `venv-bubble` → اختياري لعزل Bubble Detection
-
+ 
 > مهم: ماينفعش CPU Torch و GPU Torch يبقوا في نفس البيئة.
 
 ## ترتيب اختيار البيئة
@@ -58,8 +55,7 @@ Professional desktop tool for **cleaning, improving, and editing manga/webtoon p
 
 1. `venv-gpu`
 2. `venv-cpu`
-3. `venv-bubble` عند الحاجة
-4. Python المحلي أو النظام كـ fallback
+ 4. Python المحلي أو النظام كـ fallback
 
 وكمان بيتأكد إن الباكدجات المطلوبة موجودة قبل ما يستخدم البيئة.
 
@@ -93,14 +89,4 @@ py -3.11 -m venv "$env:LOCALAPPDATA\MangaEditorV2\python\venv-gpu"
 ```powershell
 & "$env:LOCALAPPDATA\MangaEditorV2\python\venv-gpu\Scripts\python.exe" -c "import torch; print(torch.cuda.is_available())"
 ```
-
-## ملاحظات
-
-* نقل المكتبات إلى `LocalAppData` بيقلل حجم الـ EXE
-* لو `venv-gpu` موجودة لكن ناقصها مكتبات، التطبيق يعمل fallback أو يفشل حسب الحالة
-* لو مش محتاج GPU، يكفي `venv-cpu`
-
-```
-
-لو عايز أعملهولك كمان **بأسلوب Documentation احترافي جدًا ومختصر في 10 سطور فقط**.
-```
+ 
